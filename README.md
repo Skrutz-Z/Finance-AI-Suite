@@ -160,33 +160,6 @@ Prophet model-fit tests may take 30–60 seconds on first run while Stan compile
 
 ---
 
-## Interview Talking Points
-
-Use these when presenting the project in a finance AI, FP&A, or data science interview:
-
-1. **End-to-end finance AI story**
-   > "I built a modular suite that mirrors how finance teams actually work: forecast liquidity, audit the GL, and explain variances — three workflows that are usually siloed."
-
-2. **Why Prophet for cash flow**
-   > "Daily cash flow has trend and seasonality. Prophet handles both, exposes uncertainty intervals for treasury planning, and supports scenario overlays without retraining."
-
-3. **Why Isolation Forest for audit**
-   > "We rarely have labeled fraud in GL data. Isolation Forest is unsupervised, scales well, and surfaces multidimensional outliers — midnight posting times combined with abnormal amounts."
-
-4. **Responsible RAG design**
-   > "The copilot defaults to local retrieval and excerpt synthesis so the demo runs without API keys. When a key is provided, answers are grounded in retrieved 10-K note chunks with source citations."
-
-5. **Production-minded architecture**
-   > "Logic lives in `src/`, the UI is thin, outputs are typed DataFrames and Plotly figures, and pytest covers data generation, model fitting, and anomaly scoring."
-
-6. **Business metrics framing**
-   > "Anomaly detection reduces manual sampling risk. Forecast confidence bands support liquidity conversations. The copilot compresses MD&A research from hours to minutes."
-
-7. **Extension roadmap**
-   > "Next steps: connect to ERP exports (NetSuite/SAP), add SHAP explainability for flagged GL rows, persist ChromaDB indexes per filing year, and wire Slack/email alerts for high-risk postings."
-
----
-
 ## Tech Stack
 
 | Layer | Technology |
