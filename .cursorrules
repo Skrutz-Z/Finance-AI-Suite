@@ -1,0 +1,13 @@
+# Enterprise Finance AI Suite - Cursor Rules
+
+## Architecture & Code Standards
+- Framework: Python 3.10+, Streamlit, Scikit-learn, Prophet, Plotly, LangChain.
+- Maintain a strictly modular architecture under `src/` (do not dump business logic inside `app.py`).
+- Use typing annotations and docstrings for all functions.
+- All visualization functions must return `plotly.graph_objects.Figure` instances.
+
+## Module Details:
+1. `src/data_generator.py`: Generates realistic synthetic cash flow transactions and general ledger journal entries with configurable anomaly rates and volatility.
+2. `src/forecaster.py`: Implements a CashFlowForecaster class utilizing Prophet with confidence intervals and scenario toggles.
+3. `src/anomaly_detector.py`: Implements an AnomalyDetector class using Scikit-Learn's IsolationForest, outputting flagged entries and feature anomaly metrics.
+4. `src/financial_rag.py`: Implements a FinancialCopilot class using local embeddings/mock RAG so the app runs out-of-the-box without requiring mandatory paid API keys, but can accept an OpenAI/Gemini API key if supplied via `st.sidebar`.
