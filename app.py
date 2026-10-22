@@ -63,6 +63,7 @@ CUSTOM_CSS = """
         padding: 1rem 1.25rem;
         font-size: 0.9rem;
         line-height: 1.6;
+        color: #111827;
         max-height: 320px;
         overflow-y: auto;
     }
